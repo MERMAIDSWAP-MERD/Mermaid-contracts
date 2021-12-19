@@ -1,6 +1,10 @@
 /**
+ *Submitted for verification at BscScan.com on 2021-11-19
+*/
+
+/**
  *Submitted for verification at polygonscan.com on 2021-09-24
- */
+*/
 
 // SPDX-License-Identifier: MIT
 
@@ -1196,10 +1200,5 @@ contract TokenStaking is Ownable {
         // Withdraw rewards
         safeTransferReward(address(msg.sender), _amount);
         emit EmergencyRewardWithdraw(msg.sender, _amount);
-    }
-
-    function withdrawTokens(IBEP20 _token) public onlyOwner {
-        uint256 bal = _token.balanceOf(address(this));
-        _token.transfer(msg.sender, bal);
     }
 }
